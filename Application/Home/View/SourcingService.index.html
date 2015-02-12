@@ -1,0 +1,108 @@
+<include file="common/header"/>
+  <div id="main">
+    <div class="wrapper">
+      <div class="w-fly-mr">
+        <div class="w-fly-cnt">
+          <div class="position"><a href="/">首页</a> <i>|</i> <strong>委托采购</strong></div>
+
+          <form id="js-validator" class="w-form" action="{:U('sourcing_service/add')}" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="dopost" value="true" />
+            <div class="header">
+              <h3>委托采购</h3>
+              <p>工采网是工业采购服务商，您可以委托工采网为您采购产品，请填写如下表单，我们会尽快与您联络。注：<i>*</i> 为必填项。</p>
+            </div>
+
+            <fieldset class="product-info">
+              <div class="item clearfix">
+                <label class="label"><i>*</i> 产品名称:</label>
+                <div class="input">
+                  <input type="text" name="productName" class="wide text">
+                </div>
+              </div>
+              <div class="item clearfix">
+                <label class="label">型号/规格:</label>
+                <div class="input">
+                  <input type="text" name="modelNumber" class="text">
+                </div>
+              </div>
+              <div class="item clearfix">
+                <label class="label">品牌:</label>
+                <div class="input">
+                  <input type="text" name="brand" class="text">
+                  <div class="tips">若无特别要求，则不需填写。</div>
+                </div>
+              </div>
+              <div class="item clearfix">
+                <label class="label">制造厂家:</label>
+                <div class="input">
+                  <input type="text" name="manufacturer" class="wide text">
+                  <div class="tips">若无特别要求，则不需填写。</div>
+                </div>
+              </div>
+              <!-- 
+              <div class="item clearfix">
+                <label class="label">Certification Required:</label>
+                <div class="input">
+                  <input type="text" name="certificationRequired" class="text">
+                </div>
+              </div>
+               -->
+              <div class="item clearfix">
+                <label class="label">采购数量:</label>
+                <div class="input">
+                  <input type="text" name="purchaseQuantity" class="text">
+                </div>
+              </div>
+              <div class="item clearfix">
+                <label class="label">附件:</label>
+                <div class="input">
+                  <input type="text" readonly style="width:198px;">
+                  <input type="file" name="attachment" class="fn-hide">
+                  <input type="button" id="js-file" class="file" value="浏览">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="product-info">
+              <legend>您的联络方式:</legend>
+              <div class="item clearfix">
+                <label class="label"><i>*</i> 姓名:</label>
+                <div class="input">
+                  <input type="text" name="name" class="text">
+                </div>
+              </div>
+              <div class="item clearfix">
+                <label class="label"><i>*</i> Email:</label>
+                <div class="input">
+                  <input type="text" name="email" class="text">
+                </div>
+              </div>
+              <div class="item clearfix">
+                <label class="label">电话号码:</label>
+                <div class="input">
+                  <input type="text" name="phoneNumber" class="text">
+                </div>
+              </div>
+              <div class="item clearfix">
+                <label class="label"><i>*</i> 公司名称:</label>
+                <div class="input">
+                  <input type="text" name="companyName" class="wide text">
+                </div>
+              </div>
+              <div class="item clearfix">
+                <label class="label">网址</label>
+                <div class="input">
+                  <input type="text" name="website" class="wide text">
+                </div>
+              </div>
+              <div class="item">
+                <button type="submit" class="submit">提 交</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <include file="common/sidebar"/>
+    </div>
+  </div>
+<include file="common/footer"/>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>系统提示</title>
+<load file="__PUBLIC__/Js/jquery-1.8.2.min.js" />
+</head>
+<body>
+
+<style type="text/css">
+*{ font-family: 微软雅黑;}
+.Prompt_top, .Prompt_btm, .Prompt_ok, .Prompt_x { background:url(__PUBLIC__/image/message.gif) no-repeat; display:inline-block }
+.Prompt { width:640px; margin:100px auto 180px; text-align:left; }
+.Prompt_top { background-position:0 0; height:15px; width:100%; }
+.Prompt_con { border-left:1px solid #E7E7E7; border-right:1px solid #E7E7E7; background:#fff; overflow:hidden;}
+.Prompt_btm { background-position:0 -27px; height:6px; width:100%; overflow:hidden; }
+.Prompt_con dl { margin:0 30px; overflow:hidden;}
+.Prompt_con dt { font-size:18px; padding:15px 0; border-bottom:1px solid #EEEEEE; font-weight: bold;_height:20px;}
+.Prompt_con dd { float:left; display:block; padding:15px; }
+.Prompt_con dd h2 { font-size:14px; line-height:30px; }
+.Prompt_ok { background-position:-72px -39px; width:68px; height:68px; }
+.Prompt_x { background-position:0 -39px; width:68px; height:68px; }
+.Prompt_con a.a { color:#fff; padding:0 15px; line-height:30px; background-color:#307ba0; display:inline-block; font-size:14px; margin:20px 0px; }
+</style>
+<script>
+function Jump(){
+    window.location.href = '{$jumpUrl}';
+}
+document.onload = setTimeout("Jump()" , {$waitSecond}* 1000);
+</script>
+  <div class="Prompt">
+    <div class="Prompt_top"></div>
+  <div class="Prompt_con">
+    <dl>
+      <dt>提示信息</dt>
+      <dd><span class="Prompt_x" style="margin-top:50px;"></span></dd>
+      <dd style="width: 370px;">
+      <h2 style="color:red">{$error}</h2>
+        <present name="closeWin" >
+      <p>系统将在 <span style="color:blue;font-weight:bold">{$waitSecond}</span> 秒后自动关闭<br/><br/>
+      	如果不想等待,直接点击 <A HREF="{$jumpUrl}">这里</A> 关闭</p>
+      </present>
+      <notpresent name="closeWin" >
+        <p>系统将在 <span style="color:blue;font-weight:bold">{$waitSecond}</span> 秒后自动跳转<br/><br/>
+		如果不想等待,直接点击 <A HREF="{$jumpUrl}">这里</A> 跳转<br/><br/>
+         	 或者 <a href="{:U('index/index')}">返回首页</a></p>
+      </notpresent>
+      </dd>
+    </dl>
+    <div class="c"></div>
+    </div>
+    <div class="Prompt_btm"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<header id="header">
+ <div class="wrapper">
+	 <h1><a href="/"><img src="__ROOT__/statics/front/img/logo.png" alt="ISweek.com" /></a></h1>
+      <form action="{:U('/home/search')}" class="search clearfix" id="search">
+        <fieldset class="search-panel">
+          <input type="text" name="kw" class="kw js-placeholder" value="<?php if(empty($_GET['kw'])){ echo '产品名称/型号/关键词'; }else{ echo $_GET['kw']; } ?>"/>
+          <span class="select-wrap">
+            <select name="cid" id="js-select">
+              <option value="0">全部类目</option>
+              <?php foreach($search_categorys as $vo){ ?>
+              <option value="{$vo.term_id}" <?php if($curr_search_cid==$vo['term_id']){ echo 'selected'; } ?> >{$vo.name}</option>
+              <?php } ?>
+            </select>
+          </span>
+        </fieldset>
+        <button type="submit" class="search-submit"><span>搜索</span></button>
+      </form>
+
+      <a class="lang" href="http://www.isweek.com/" target="_blank">English</a>
+    </div>
+</header>
+
+<nav id="nav">
+  <div class="wrapper">
+    <ul class="fn-clearfix">
+      <li><a class="<?php if(empty($curr_term_id)){ echo 'on'; }?> first" href="/allcategories.html">全部类目</a></li>
+      <?php foreach($navi_categorys as $vo){ ?>
+      <li><a class="<?php foreach($arr_parent as $vo_parent){ if($vo_parent == $vo['term_id']){ echo ' on'; break; } } ?>"
+      	href="{:rw_category_url($vo['name'],$vo['term_id'])}">{$vo.name}</a></li>
+      <?php } ?>
+
+      <li class="fr">
+        <a class="<?php if($curr_menu_key == 'SourcingService'){ echo 'on'; } ?>" href="/SourcingService.html">委托采购</a>
+      </li>
+
+      <li class="fr">
+        <a class="trigger" href="/aboutus.html">关于我们</a>
+        <ul>
+          <li><a href="/aboutus.html">关于我们</a></li>
+          <li><a href="/contactus.html" title="contact us-ISweek.com">联系我们</a></li>
+        </ul>
+      </li>
+
+      <li class="fr">
+        <a class="" href="http://news.isweek.cn">资讯</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

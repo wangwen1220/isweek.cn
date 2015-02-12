@@ -1,0 +1,158 @@
+<include file="common/header"/>
+  <div id="main">
+    <div class="wrapper">
+      <div class="w-fly-mr">
+        <div class="w-fly-cnt">
+
+        <div class="position"><a href="/">主页 </a>
+        <?php $left_curr_term_ids=array();
+			foreach($term_ids as $id){
+				foreach($dao_hang_categorys as $vo){
+					if($id==$vo['term_id']){
+						if($id != $curr_term_id){
+							$left_curr_term_ids[] = $id;
+							$url = rw_category_url($vo['name'],$vo['term_id']);
+							echo '<i>|</i> <a href="'.$url.'">'.$vo['name'].'</a>';
+						}else{
+							echo '<i>|</i> <span class="highlight">Terms and Conditions</span>';
+						}
+					}
+				}
+			}
+		?></div>
+
+          <aside class="aside">
+            <div class="w-box w-box-contact">
+              <div class="w-box-hd">
+                <h2 class="title">联系工采网</h2>
+              </div>
+              <div class="w-box-bd">
+                <ul>
+                  <li><a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=2913816085&site=qq&menu=yes" target="_blank" rel="nofollow">QQ:2913816085</a></li>
+        				  <li><span class="tel">0755-83289071<br>0755-83289035</span> </li>
+        				  <li><a class="email" href="mailto:sales@isweek.cn" target="_blank" rel="nofollow">sales@isweek.cn</a></li>
+<!--
+                  <li><a class="online" href="#" target="_blank" rel="nofollow">Online Support</a></li>
+                  <li><a class="skype" href="#" target="_blank" rel="nofollow">Skype</a></li>
+                  <li><a class="msn" href="#" target="_blank" rel="nofollow">MSN</a></li>
+                  <li><a class="tel"></a></li>
+
+                  <li><a class="online" href="#" target="_blank" rel="nofollow">Online Support</a></li>
+                    <li><a class="qq" href="#" target="_blank" rel="nofollow">QQ:</a></li>
+                      <li><a class="tel" href="#" target="_blank" rel="nofollow">0755-83333333</a></li>
+                        <li><a class="email" href="mailto:sales@isweek.com" target="_blank" rel="nofollow">sales@isweek.com</a></li>
+-->
+				</ul>
+              </div>
+            </div>
+            <if condition="!empty($recommend_products)">
+			<div class="w-box w-box-popular">
+              <div class="w-box-hd">
+                <h2 class="title">热卖产品</h2>
+              </div>
+              <div class="w-box-bd">
+                <ul>
+				  <volist name="popular_products" id="vo">
+					<li>
+					  <a class="img" href="{:rw_product_url($vo['product_name'],$vo['serial_no'],$vo['id'])}" target="_blank"><img src="{$vo.thumb_200}" alt="{$vo.product_name}" width="100" height="100" /></a>
+					  <h5 class="name"><a href="{:rw_product_url($vo['product_name'],$vo['serial_no'],$vo['id'])}" target="_blank">{$vo.product_name}</a></h5>
+					</li>
+				  </volist>
+                </ul>
+              </div>
+            </div>
+		    </if>
+          </aside>
+
+          <div class="prodetails">
+            <h1 class="protitle">{$item.product_name} - {$item.serial_no}</h1>
+            <div class="proimg" id="js-proimg">
+              <div class="info">
+                <p>{$item.features}</p>
+                <ul>
+                  <li>产品型号: {$item.serial_no}</li>
+                  <?php if(!empty($item['attachment'])){ ?>
+                  <li>附件: <a href="{$item.attachment}" target="_blank"><img src="__ROOT__/statics/front/img/icon-pdf.png" alt="Date Sheet File" /></a></li>
+                  <?php } ?>
+                </ul>
+              </div>
+              <div class="preview">
+                <ul class="imgs">
+                  <?php foreach($item['images'] as $k=>$vo){ ?>
+                  <?php if($k==0){ ?>
+                  <li><a class="jqzoom"><img class="lazy" src="{$vo.thumb_300}" data-src="{$vo.url}" alt="{$item.product_name}" width="300" height="300" /></a></li>
+                  <?php }else{ ?>
+              	  <li class="fn-hide"><a class="jqzoom"><img class="lazy" src="{$vo.thumb_300}" data-src="{$vo.url}" alt="{$item.product_name}" width="300" height="300" /></a></li>
+                  <?php } } ?>
+                </ul>
+                <div class="tips">Mouse over image to zoom</div>
+              </div>
+              <ul class="thumbs">
+              <?php foreach($item['images'] as $vo){ ?>
+              <li><img class="lazy" src="{$vo.thumb_100}" /></li>
+              <?php } ?>
+              </ul>
+
+              <!-- <div id="js-share" class="share">
+                <span>分享:</span>
+                <a class="twitter" rel="twitter" title="Connect with us on twitter"></a>
+                <a class="facebook" rel="facebook" title="Connect with us on facebook"></a>
+                <a class="googleplus" rel="googleplus" title="Connect with us on Google Plus"></a>
+                <a class="share-sina" rel="sina" title="Connect with us on sina"></a>
+                <a class="share-weibo" rel="weibo" title="Connect with us on weibo"></a>
+                <a class="share-qqzone" rel="qqzone" title="Connect with us on qqzone"></a>
+                <a class="share-email" rel="email" title="Connect with us on email"></a>
+              </div> -->
+              <div class="share">
+                <!-- bdshare -->
+                <div class="bdsharebuttonbox">
+                  <span class="share-title">分享到:</span>
+                  <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                  <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                  <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                  <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                  <a href="#" class="bds_more" data-cmd="more"></a>
+                  <a class="bds_count" data-cmd="count"></a>
+                </div>
+                <script>
+                  window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                </script>
+                <!-- /bdshare -->
+              </div>
+            </div>
+            <div class="prodesc">
+              <h3 class="title">产品介绍</h3>
+              <p>{$item.description}</p>
+            </div>
+          </div>
+
+          <div class="box-sourcing-service">
+            <p>如果您未找到合适的产品，您可以委托工采网为您采购。请点击：</p>
+            <a href="/SourcingService.html">委托采购</a>
+          </div>
+
+		  <if condition="!empty($recommend_products)">
+          <div class="w-prolist fn-cb">
+            <div class="w-prolist-hd">
+              <h2 class="title">推荐产品</h2>
+            </div>
+            <div class="w-prolist-bd">
+              <ul class="clearfix">
+			  <!-- -->
+			  <volist name="recommend_products" id="vo">
+                <li>
+                  <a class="img" href="{:rw_product_url($vo['product_name'],$vo['serial_no'],$vo['id'])}" target="_blank"><img src="{$vo.thumb_100}" alt="{$vo.product_name}" width="100" height="100" /></a>
+                  <h5 class="name"><a href="{:rw_product_url($vo['product_name'],$vo['serial_no'],$vo['id'])}" target="_blank">{$vo.product_name}</a></h5>
+                </li>
+			  </volist>
+			  <!-- end -->
+              </ul>
+            </div>
+          </div>
+		</if>
+        </div>
+      </div>
+      <include file="common/sidebar"/>
+    </div>
+  </div>
+<include file="common/footer"/>

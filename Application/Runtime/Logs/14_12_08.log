@@ -1,0 +1,90 @@
+[ 2014-12-08T16:34:25+08:00 ] 192.168.2.212 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.158981s ]
+
+[ 2014-12-08T16:34:27+08:00 ] 192.168.2.212 /Thumbs/200/0140616/539ea47d2108e.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002215s ]
+
+[ 2014-12-08T16:34:27+08:00 ] 192.168.2.212 /Thumbs/200/0140617/539fa5de661fd.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002116s ]
+
+[ 2014-12-08T16:34:30+08:00 ] 192.168.2.212 /aboutus.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002014s ]
+
+[ 2014-12-08T16:34:31+08:00 ] 192.168.2.212 /statics/front/img/logo-isweekcn.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002433s ]
+
+[ 2014-12-08T16:34:31+08:00 ] 192.168.2.212 /statics/front/img/logo-ofweek.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002118s ]
+
+[ 2014-12-08T16:34:31+08:00 ] 192.168.2.212 /statics/front/img/logo-jobht.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002257s ]
+
+[ 2014-12-08T16:34:31+08:00 ] 192.168.2.212 /statics/front/img/logo-caikeji.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001520s ]
+
+[ 2014-12-08T16:34:31+08:00 ] 192.168.2.212 /statics/front/img/logo-ofweekb2b.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003207s ]
+
+[ 2014-12-08T16:35:33+08:00 ] 192.168.2.212 /aboutus.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002074s ]
+
+[ 2014-12-08T16:35:34+08:00 ] 192.168.2.212 /statics/front/img/logo-isweekcn.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+
+[ 2014-12-08T16:35:34+08:00 ] 192.168.2.212 /statics/front/img/logo-jobht.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004898s ]
+
+[ 2014-12-08T16:35:36+08:00 ] 192.168.2.212 /aboutus.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001858s ]
+
+[ 2014-12-08T16:35:36+08:00 ] 192.168.2.212 /statics/front/img/logo-isweekcn.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+
+[ 2014-12-08T16:35:36+08:00 ] 192.168.2.212 /statics/front/img/logo-jobht.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+
+[ 2014-12-08T16:36:40+08:00 ] 192.168.2.212 /aboutus.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001844s ]
+
+[ 2014-12-08T16:36:42+08:00 ] 192.168.2.212 /aboutus.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001960s ]
+
+[ 2014-12-08T16:36:57+08:00 ] 192.168.2.212 /aboutus.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001892s ]
+
