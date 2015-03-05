@@ -66,7 +66,11 @@
       	href="<?php echo rw_category_url($vo['name'],$vo['term_id']);?>"><?php echo ($vo["name"]); ?></a></li>
       <?php } ?>
 
-      <li class="contact-us">
+      <li class="fr">
+        <a class="<?php if($curr_menu_key == 'SourcingService'){ echo 'on'; } ?>" href="/SourcingService.html">委托采购</a>
+      </li>
+
+      <li class="fr">
         <a class="trigger" href="/aboutus.html">关于我们</a>
         <ul>
           <li><a href="/aboutus.html">关于我们</a></li>
@@ -74,9 +78,10 @@
         </ul>
       </li>
 
-      <li style="float: right;">
+      <li class="fr">
         <a class="" href="http://news.isweek.cn">资讯</a>
       </li>
+
     </ul>
   </div>
 </nav>
@@ -191,9 +196,12 @@
           </div>
 
           <div class="box-sourcing-service">
-            <p>If you cannot find what you want, you can entrust ISweek to source for you. Just click:</p>
-            <a href="/SourcingService.html">Sourcing Service</a>
+            <p>如果您未找到合适的产品，您可以委托工采网为您采购。请点击：</p>
+            <a href="/SourcingService.html">委托采购</a>
           </div>
+          <p class="pro-explain">ISweek 工采网的所有产品均来自于原始生产厂商直接供货，非第三方转售。</p>
+
+<!-- <div style="font-family: 宋体;font-size: 18px; color:#E82D2C; text-align: center;">ISweek 工采网的所有产品均来自于原始生产厂商直接供货，非第三方转售。</div> -->
 
 		  <?php if(!empty($recommend_products)): ?><div class="w-prolist fn-cb">
             <div class="w-prolist-hd">
@@ -295,6 +303,9 @@
   </div>
   <footer id="footer">
     <div class="wrapper">
+      <div class="links">
+        <a class="<?php if($curr_menu_key == 'SourcingService'){ echo 'on'; } ?>" href="/SourcingService.html">委托采购</a>
+      </div>
       <div class="help clearfix">
         <dl class="support clearfix">
           <dt>客户支持</dt>

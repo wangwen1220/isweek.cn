@@ -81,6 +81,8 @@ class SearchController extends CommonController {
 		$res = $this->products_obj->where ( $where_and )->order ( 'edit_time DESC' )->limit ( $page->firstRow . ',' . $page->listRows )->select ();
 		// echo $this->products_obj->getLastSql();
 		foreach ( $res as $k => $vo ) {
+			//去html标签，换行
+			$res[$k]['abstract'] = str_replace("\n",'<br/>', strip_tags($vo['abstract']));
 			if (! empty ( $vo ['images'] )) {
 				$res [$k] ['images'] = json_decode ( $vo ['images'], true );
 				$res [$k] ['thumb'] = $res [$k] ['images'] [0];

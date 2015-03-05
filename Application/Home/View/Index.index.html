@@ -43,7 +43,7 @@
               <li class="prolist-item"><div class="wrap">
                 <a href="{:rw_product_url($vo['product_name'],$vo['serial_no'],$vo['id'])}" target="_blank" class="thumb"><img src="{$vo.thumb_200}" alt="{$vo.product_name}" width="200" height="200" /></a>
                 <h3 class="title"><a href="{:rw_product_url($vo['product_name'],$vo['serial_no'],$vo['id'])}" target="_blank">{$vo.product_name}</a></h3>
-                <p class="description"><?php echo strip_tags($vo['abstract']); ?></p>
+                <p class="description"><?php echo $vo['abstract']; ?></p>
               </div></li>
             <?php } ?>
             

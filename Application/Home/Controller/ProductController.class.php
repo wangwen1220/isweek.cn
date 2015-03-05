@@ -103,7 +103,9 @@ class ProductController extends CommonController {
 				$list [$k] ['thumb'] = $list [$k] ['images'] [0]; // 原图
 				$list [$k] ['thumb_200'] = $this->get_thumb ( $list [$k] ['images'] [0] ['url'], 200 ); // 长宽200PX图片（缩略图）
 			}
-			$list [$k] ['abstract'] = strip_tags ( $vo ['abstract'] );
+			//去html标签，换行
+			$list[$k]['abstract'] = str_replace("\n",'<br/>', strip_tags($vo['abstract']));
+			//$list [$k] ['abstract'] = strip_tags ( $vo ['abstract'] );
 		} // var_dump($list);exit;
 		$this->ajaxReturn ( $list );
 	}
@@ -156,6 +158,8 @@ class ProductController extends CommonController {
 			}
 		}
 		foreach ( $res as $k => $vo ) {
+			//去html标签，换行
+			$res[$k]['abstract'] = str_replace("\n",'<br/>', strip_tags($vo['abstract']));
 			if (! empty ( $vo ['images'] )) {
 				$res [$k] ['images'] = json_decode ( $vo ['images'], true );
 				$res [$k] ['thumb'] = $res [$k] ['images'] [0];

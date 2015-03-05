@@ -116,7 +116,7 @@
               <li class="prolist-item"><div class="wrap">
                 <a href="<?php echo rw_product_url($vo['product_name'],$vo['serial_no'],$vo['id']);?>" target="_blank" class="thumb"><img src="<?php echo ($vo["thumb_200"]); ?>" alt="<?php echo ($vo["product_name"]); ?>" width="200" height="200" /></a>
                 <h3 class="title"><a href="<?php echo rw_product_url($vo['product_name'],$vo['serial_no'],$vo['id']);?>" target="_blank"><?php echo ($vo["product_name"]); ?></a></h3>
-                <p class="description"><?php echo strip_tags($vo['abstract']); ?></p>
+                <p class="description"><?php echo $vo['abstract']; ?></p>
               </div></li>
             <?php } ?>
             

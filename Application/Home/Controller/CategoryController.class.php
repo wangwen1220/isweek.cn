@@ -119,6 +119,8 @@ class CategoryController extends CommonController {
 			$list = $model->query ( $page_sql );
 			
 			foreach ( $list as $k => $vo ) {
+				//去html标签，换行
+				$list[$k]['abstract'] = str_replace("\n",'<br/>', strip_tags($vo['abstract']));
 				if (! empty ( $vo ['images'] )) {
 					$list [$k] ['images'] = json_decode ( $vo ['images'], true );
 					$list [$k] ['thumb'] = $list [$k] ['images'] [0];

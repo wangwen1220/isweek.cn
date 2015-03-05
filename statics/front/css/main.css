@@ -2055,28 +2055,34 @@ html.sourcing-service #main .w-form .header p i {
 
 /* box-sourcing-service */
 .box-sourcing-service {
-  margin: 40px auto;
+  margin: 40px auto 20px;
   padding: 10px;
   text-align: center;
   background: #FFF3D5;
 }
 .box-sourcing-service p {
-  margin: 25px 0;
+  margin: 20px 0;
   font-size: 19px;
   color: #555;
 }
 .box-sourcing-service a {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: inline-block;
   padding: 0 60px;
-  height: 55px;
+  height: 50px;
   border-radius: 3px;
   color: #fff;
   text-align: center;
-  font: 20px/60px 'Microsoft YaHei', SimHei;
+  font: 20px/50px 'Microsoft YaHei', SimHei;
   background: #E82D2C;
   text-decoration: none;
   cursor: pointer;
+}
+.pro-explain {
+  text-align: center;
+  color: #E82D2C;
+  font-size: 14px;
+  font-size: 18px;
 }
 
 /* Media Queries

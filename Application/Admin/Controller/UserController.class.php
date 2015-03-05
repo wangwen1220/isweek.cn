@@ -55,7 +55,7 @@ class UserController extends AdminbaseController{
 	
 	function edit_post(){
 		if (IS_POST) {
-			if(empty($_POST['user_pass'])){
+			/* if(empty($_POST['user_pass'])){
 				unset($_POST['user_pass']);
 			}
 			if ($this->users_obj->create()) {
@@ -67,6 +67,20 @@ class UserController extends AdminbaseController{
 				}
 			} else {
 				$this->error($this->users_obj->getError());
+			} */
+
+			$data = array();
+			$_POST['user_pass'] = trim($_POST['user_pass']);
+			if (!empty($_POST['user_pass'])){
+				$data['user_pass'] = sp_password($_POST['user_pass']);
+			}
+			$data['user_email'] = trim($_POST['user_email']);
+			$data['role_id'] = intval($_POST['role_id']);
+			$rs = $this->users_obj->where('user_login = "' . $_POST['user_login'] . '"')->save($data);
+			if($rs){
+				$this->success("保存成功！");
+			}else{
+				$this->error("保存失败！");
 			}
 		}
 	}
